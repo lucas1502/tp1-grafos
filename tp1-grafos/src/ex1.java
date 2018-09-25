@@ -2,7 +2,8 @@
 public class ex1 {
 
 	public static void main(String[] args) {
-		System.out.println("Ol·, git!");
+		System.out.println("Ol√°, git!");
+		//Commit gerado pelo git
 
 	}
 
