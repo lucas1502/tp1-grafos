@@ -6,6 +6,7 @@ public class ex1 {
 		//Commit gerado pelo git
 		//Commit gerado pelo eclipse
 		//Commit feito por outra conta
+		//Commit feito por outra conta de novo
 	}
 
 }
