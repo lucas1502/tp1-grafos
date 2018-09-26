@@ -5,6 +5,7 @@ public class ex1 {
 		System.out.println("Olá, git!");
 		//Commit gerado pelo git
 		//Commit gerado pelo eclipse
+		//Commit feito por outra conta
 	}
 
 }
