@@ -17,11 +17,6 @@ public class ex1 {
 			linha = buffRead.readLine();
 		}
 		buffRead.close();
-		//Commit gerado pelo git
-		//Commit gerado pelo eclipse
-		//Commit feito por outra conta
-		//Commit feito por outra conta de novo
-		// E denovo
 	}
 
 }
