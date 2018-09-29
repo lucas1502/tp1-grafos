@@ -8,25 +8,26 @@ public class ex1 {
 	public static void main(String[] args) throws IOException {
 		System.out.println("Olá, git!");
 		String path = "file.txt";
-		int u,v,peso,direc;
+		int inteiros[] = new int[4];
 		String aux = "";
 		try {
 			BufferedReader buffRead = new BufferedReader(new FileReader(path));
 			String linha = "";
-			while (linha != null) {
-				System.out.println(linha);
-				linha = buffRead.readLine();
+			int i = 0;
+			while ((linha = buffRead.readLine()) != null) {
+				i = 0;
+				System.out.println(linha);	
 				for(char c : linha.toCharArray()) {
 					if(c == ';') {
-						u = Integer.parseInt(aux);
+						inteiros[i++] = Integer.parseInt(aux);
 						aux = "";
+						
 					} else if (c == ' ') {
 						continue;
 					} else {
 						aux = aux + c;
 					}
 				}
-				
 				
 			}
 			buffRead.close();
