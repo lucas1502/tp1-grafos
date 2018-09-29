@@ -9,14 +9,25 @@ public class ex1 {
 		System.out.println("Olá, git!");
 		String path = "file.txt";
 		int u,v,peso,direc;
-		char c;
-		String aux;
+		String aux = "";
 		try {
 			BufferedReader buffRead = new BufferedReader(new FileReader(path));
 			String linha = "";
 			while (linha != null) {
 				System.out.println(linha);
 				linha = buffRead.readLine();
+				for(char c : linha.toCharArray()) {
+					if(c == ';') {
+						u = Integer.parseInt(aux);
+						aux = "";
+					} else if (c == ' ') {
+						continue;
+					} else {
+						aux = aux + c;
+					}
+				}
+				
+				
 			}
 			buffRead.close();
 		} catch (IOException e) {
