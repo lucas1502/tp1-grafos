@@ -14,6 +14,7 @@ public class ex1 {
 			BufferedReader buffRead = new BufferedReader(new FileReader(path));
 			String linha = "";
 			int i = 0;
+			
 			while ((linha = buffRead.readLine()) != null) {
 				i = 0;
 				System.out.println(linha);	
