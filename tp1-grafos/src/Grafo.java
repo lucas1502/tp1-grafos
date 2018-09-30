@@ -18,4 +18,14 @@ public abstract class Grafo {
 	public int getTam() {
 		return this.tam;
 	}
+	
+	public int getGrau (int v1) {
+		int cont=0;
+		for(int i=0; i<this.tam; i++) {
+			if(this.arestas[i][v1]!=null) {
+				cont = cont + this.arestas[i][v1].size();
+			}
+		}
+		return cont;
+	}
 }
