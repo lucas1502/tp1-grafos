@@ -1,8 +1,8 @@
 
-public class Vertice {
+public class Aresta {
 	private int peso;
 	
-	public Vertice(int p) {
+	public Aresta(int p) {
 		setPeso(p);
 	}
 	public void setPeso(int peso) {

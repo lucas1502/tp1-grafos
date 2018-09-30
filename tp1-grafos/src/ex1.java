@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class ex1 {
 
 	public static void main(String[] args) throws IOException {
+		Dirigido d;
 		System.out.println("Ol√°, git!");
 		String path = "file.txt";
 		int vertices = 0;					// numero de vertices no grafo
@@ -17,6 +18,7 @@ public class ex1 {
 			int i = 0;
 			linha = buffRead.readLine();		// Primeira linha È lida
 			vertices = Integer.parseInt(linha); // Primeiro valor È do numero de vertices, converte para inteiro
+			d = new Dirigido(vertices);
 			while ((linha = buffRead.readLine()) != null) {		// ler todas as linhas do arquivo
 				aux = "";
 				i = 0;
@@ -33,7 +35,7 @@ public class ex1 {
 					}
 				}
 				inteiros[i] = Integer.parseInt(aux);
-				
+				d.inserirVertices(inteiros[0], inteiros[1], inteiros[2], inteiros[3]);
 				
 			}
 			buffRead.close();
