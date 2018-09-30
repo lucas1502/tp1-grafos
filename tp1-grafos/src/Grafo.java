@@ -22,10 +22,36 @@ public abstract class Grafo {
 	public int getGrau (int v1) {
 		int cont=0;
 		for(int i=0; i<this.tam; i++) {
-			if(this.arestas[i][v1]!=null) {
-				cont = cont + this.arestas[i][v1].size();
+			if(this.arestas[i][v1-1]!=null) {
+				cont = cont + this.arestas[i][v1-1].size();
 			}
 		}
 		return cont;
 	}
+	
+	public boolean isIsolado (int v1) {
+		for(int i=0; i<this.tam; i++) {
+			if(this.arestas[i][v1-1]!=null && i!=v1-1) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public boolean isPendente (int v1) {
+		if(this.getGrau(v1-1)==1) {
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean isRegular () {
+		for(int i=0; i<this.tam-1; i++) {
+			if(this.getGrau(i)!=this.getGrau(i+1)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
 }
