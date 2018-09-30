@@ -15,7 +15,6 @@ public abstract class Grafo {
 		this.arestas[v1-1][v2-1] = new ArrayList<Aresta>();
 		this.arestas[v1-1][v2-1].add(new Aresta(peso));
 	}
-	
 	public int getTam() {
 		return this.tam;
 	}
