@@ -28,4 +28,75 @@ public abstract class Grafo {
 		}
 		return cont;
 	}
+	
+	public Grafo getComplementar() {
+		
+		Grafo complementar = new NaoDirigido(this.getTam());
+		
+		for(int i=0; i<this.getTam(); i++) {
+
+			for(int j =0; j<this.getTam(); j++)
+
+				if(arestas[i][j]==null) {
+					
+					
+					if(i!=j) {
+						
+						complementar.setVertices(i+1, j+1, 1);
+						
+					}
+				}
+		}
+		return complementar;
+	}
+	public boolean isCompleto() {
+		
+		
+		for(int i=0; i<arestas.length; i++) {
+			
+			
+			for(int j=0; j<arestas.length; j++) {
+				
+				
+				if(arestas[i][j]!=null) {
+					
+					continue;
+					
+				}else {
+					
+					return false;
+				}
+				
+				
+			}
+			
+			
+		}
+		
+		return true;
+		
+	}
+	public boolean isNulo() {
+	for(int i=0; i<arestas.length; i++) {
+		for(int j=0; j<arestas.length; j++) {
+			if(arestas[i][j]==null) {
+
+				continue;
+			}else {
+
+				return false;
+			}
+		}
+	}
+	return true;
+
+	}
+	public boolean isAdjacente(int v1,int v2) {
+		if(this.arestas[v1-1][v2-1]!=null) { //verifica na matriz de adj se existe ligação entre os dois vertices
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
 }
